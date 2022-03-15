@@ -43,3 +43,5 @@ const fetchData = (): void => {
     getPokemon(i)
   }
 }
+
+fetchData()

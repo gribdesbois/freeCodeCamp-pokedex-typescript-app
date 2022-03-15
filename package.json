@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "concurrently \"tsc -w\" \"nodemon public/app.js \""
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.15.0",
     "@typescript-eslint/parser": "^5.15.0",
