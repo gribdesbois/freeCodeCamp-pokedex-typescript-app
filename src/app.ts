@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 const container: HTMLElement | any = document.getElementById('app')
 const pokemons = 100
 
@@ -6,6 +7,18 @@ interface IPokemon {
   name: number
   image: string
   type: string
+}
+
+const showPokemon = (pokemon: IPokemon): void => {
+  const output = `
+    <div class='card'>
+      <span class='card--id'>#${pokemon.id}</span>
+      <img class='card--image' src=${pokemon.image} alt=${pokemon.name} />
+      <h1 class='card--name'>${pokemon.name}</h1>
+      <span class='card-details'>${pokemon.type}</span>
+    </div>
+  `
+  container.innerHTML += output
 }
 
 const getPokemon = async (id: number): Promise<void> => {
